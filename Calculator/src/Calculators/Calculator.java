@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class Calculator {
 
@@ -47,6 +48,7 @@ public class Calculator {
 		frame.getContentPane().setLayout(null);
 		
 		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.RIGHT);
 		textField.setBounds(10, 19, 247, 39);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
@@ -59,14 +61,22 @@ public class Calculator {
 		frame.getContentPane().add(btnBack);
 		
 		JButton btnClear = new JButton("C");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				textField.setText(null);
+			}
+		});
 		btnClear.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnClear.setBounds(75, 69, 55, 55);
 		frame.getContentPane().add(btnClear);
+		
 		
 		JButton btnPerc = new JButton("%");
 		btnPerc.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnPerc.setBounds(137, 69, 55, 55);
 		frame.getContentPane().add(btnPerc);
+		
 		
 		JButton btnP = new JButton("+");
 		btnP.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -76,19 +86,43 @@ public class Calculator {
 		//---------------------------Row 2------------------------
 		
 		JButton btn7 = new JButton("7");
+		btn7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn7.getText();
+				textField.setText(input);
+			}
+		});
 		btn7.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn7.setBounds(10, 135, 55, 55);
 		frame.getContentPane().add(btn7);
 		
+		
 		JButton btn8 = new JButton("8");
+		btn8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn8.getText();
+				textField.setText(input);
+			}
+		});
 		btn8.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn8.setBounds(75, 135, 55, 55);
 		frame.getContentPane().add(btn8);
 		
+		
 		JButton btn9 = new JButton("9");
+		btn9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn9.getText();
+				textField.setText(input);
+			}
+		});
 		btn9.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn9.setBounds(137, 135, 55, 55);
 		frame.getContentPane().add(btn9);
+		
 		
 		JButton btnS = new JButton("-");
 		btnS.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -98,19 +132,43 @@ public class Calculator {
 		//-------------------------------------Row 2----------------------
 		
 		JButton btn4 = new JButton("4");
+		btn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn4.getText();
+				textField.setText(input);
+			}
+		});
 		btn4.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn4.setBounds(10, 201, 55, 55);
 		frame.getContentPane().add(btn4);
 		
+		
 		JButton btn5 = new JButton("5");
+		btn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn5.getText();
+				textField.setText(input);
+			}
+		});
 		btn5.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn5.setBounds(75, 201, 55, 55);
 		frame.getContentPane().add(btn5);
 		
+		
 		JButton btn6 = new JButton("6");
+		btn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn6.getText();
+				textField.setText(input);
+			}
+		});
 		btn6.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn6.setBounds(137, 201, 55, 55);
 		frame.getContentPane().add(btn6);
+		
 		
 		JButton btnM = new JButton("*");
 		btnM.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -120,19 +178,43 @@ public class Calculator {
 		//--------------------------------------Row 4------------------------
 		
 		JButton btn1 = new JButton("1");
+		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn1.getText();
+				textField.setText(input);
+			}
+		});
 		btn1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn1.setBounds(10, 267, 55, 55);
 		frame.getContentPane().add(btn1);
 		
+		
 		JButton btn2 = new JButton("2");
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn2.getText();
+				textField.setText(input);
+			}
+		});
 		btn2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn2.setBounds(75, 267, 55, 55);
 		frame.getContentPane().add(btn2);
 		
+		
 		JButton btn3 = new JButton("3");
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn3.getText();
+				textField.setText(input);
+			}
+		});
 		btn3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn3.setBounds(137, 267, 55, 55);
 		frame.getContentPane().add(btn3);
+		
 		
 		JButton btnD = new JButton("/");
 		btnD.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -142,19 +224,29 @@ public class Calculator {
 		//---------------------------------------Row 5-----------------------
 		
 		JButton btn0 = new JButton("0");
+		btn0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String input = textField.getText() + btn0.getText();
+				textField.setText(input);
+			}
+		});
 		btn0.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btn0.setBounds(10, 333, 55, 55);
 		frame.getContentPane().add(btn0);
+		
 		
 		JButton btnDot = new JButton(".");	
 		btnDot.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnDot.setBounds(75, 333, 55, 55);
 		frame.getContentPane().add(btnDot);
 		
+		
 		JButton btnPM = new JButton("±");
 		btnPM.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnPM.setBounds(137, 333, 55, 55);
 		frame.getContentPane().add(btnPM);
+		
 		
 		JButton btnEq = new JButton("=");
 		btnEq.setFont(new Font("Tahoma", Font.PLAIN, 18));
