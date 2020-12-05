@@ -316,6 +316,42 @@ public class Calculator {
 		
 		
 		JButton btnEq = new JButton("=");
+		btnEq.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				num2 = Double.parseDouble(textField.getText());
+				if(ops == "+")
+				{
+					result = num1 + num2;
+					ans = String.format("%.2f", result);
+					textField.setText(ans);
+				}
+				else if(ops == "-")
+				{
+					result = num1 - num2;
+					ans = String.format("%.2f", result);
+					textField.setText(ans);
+				}
+				else if(ops == "*")
+				{
+					result = num1 * num2;
+					ans = String.format("%.2f", result);
+					textField.setText(ans);
+				}
+				else if(ops == "/")
+				{
+					result = num1 / num2;
+					ans = String.format("%.2f", result);
+					textField.setText(ans);
+				}
+				else if(ops == "%")
+				{
+					result = num1 % num2;
+					ans = String.format("%.2f", result);
+					textField.setText(ans);
+				}
+			}
+		});
 		btnEq.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnEq.setBounds(202, 333, 55, 55);
 		frame.getContentPane().add(btnEq);
