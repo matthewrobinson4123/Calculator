@@ -3,10 +3,16 @@ package Calculators;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Calculator {
 
 	private JFrame frame;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -36,8 +42,123 @@ public class Calculator {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 283, 438);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(10, 19, 247, 39);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		//---------------------------Row 1------------------------
+		
+		JButton btnBack = new JButton("<-");
+		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnBack.setBounds(10, 69, 55, 55);
+		frame.getContentPane().add(btnBack);
+		
+		JButton btnClear = new JButton("C");
+		btnClear.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnClear.setBounds(75, 69, 55, 55);
+		frame.getContentPane().add(btnClear);
+		
+		JButton btnPerc = new JButton("%");
+		btnPerc.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnPerc.setBounds(137, 69, 55, 55);
+		frame.getContentPane().add(btnPerc);
+		
+		JButton btnP = new JButton("+");
+		btnP.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnP.setBounds(202, 69, 55, 55);
+		frame.getContentPane().add(btnP);
+		
+		//---------------------------Row 2------------------------
+		
+		JButton btn7 = new JButton("7");
+		btn7.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn7.setBounds(10, 135, 55, 55);
+		frame.getContentPane().add(btn7);
+		
+		JButton btn8 = new JButton("8");
+		btn8.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn8.setBounds(75, 135, 55, 55);
+		frame.getContentPane().add(btn8);
+		
+		JButton btn9 = new JButton("9");
+		btn9.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn9.setBounds(137, 135, 55, 55);
+		frame.getContentPane().add(btn9);
+		
+		JButton btnS = new JButton("-");
+		btnS.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnS.setBounds(202, 135, 55, 55);
+		frame.getContentPane().add(btnS);
+		
+		//-------------------------------------Row 2----------------------
+		
+		JButton btn4 = new JButton("4");
+		btn4.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn4.setBounds(10, 201, 55, 55);
+		frame.getContentPane().add(btn4);
+		
+		JButton btn5 = new JButton("5");
+		btn5.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn5.setBounds(75, 201, 55, 55);
+		frame.getContentPane().add(btn5);
+		
+		JButton btn6 = new JButton("6");
+		btn6.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn6.setBounds(137, 201, 55, 55);
+		frame.getContentPane().add(btn6);
+		
+		JButton btnM = new JButton("*");
+		btnM.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnM.setBounds(202, 201, 55, 55);
+		frame.getContentPane().add(btnM);
+		
+		//--------------------------------------Row 4------------------------
+		
+		JButton btn1 = new JButton("1");
+		btn1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn1.setBounds(10, 267, 55, 55);
+		frame.getContentPane().add(btn1);
+		
+		JButton btn2 = new JButton("2");
+		btn2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn2.setBounds(75, 267, 55, 55);
+		frame.getContentPane().add(btn2);
+		
+		JButton btn3 = new JButton("3");
+		btn3.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn3.setBounds(137, 267, 55, 55);
+		frame.getContentPane().add(btn3);
+		
+		JButton btnD = new JButton("/");
+		btnD.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnD.setBounds(202, 267, 55, 55);
+		frame.getContentPane().add(btnD);
+		
+		//---------------------------------------Row 5-----------------------
+		
+		JButton btn0 = new JButton("0");
+		btn0.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btn0.setBounds(10, 333, 55, 55);
+		frame.getContentPane().add(btn0);
+		
+		JButton btnDot = new JButton(".");	
+		btnDot.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnDot.setBounds(75, 333, 55, 55);
+		frame.getContentPane().add(btnDot);
+		
+		JButton btnPM = new JButton("±");
+		btnPM.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnPM.setBounds(137, 333, 55, 55);
+		frame.getContentPane().add(btnPM);
+		
+		JButton btnEq = new JButton("=");
+		btnEq.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnEq.setBounds(202, 333, 55, 55);
+		frame.getContentPane().add(btnEq);
 	}
-
 }
